@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -27,13 +29,13 @@ public class PlayerMovement : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.CompareTag("DeadZone")){
-			Debug.Log("Mampozz");
+			SceneManager.LoadScene("Dead");
 		}
 		
 	}
 	void OnCollisionEnter2D(Collision2D coll){
 		if(coll.gameObject.tag == "Enemy"){
-			Debug.Log("hit enemy");
+			SceneManager.LoadScene("Dead");
 		}
 	}
 	
