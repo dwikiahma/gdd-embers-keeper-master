@@ -19,9 +19,41 @@ public class GUI : MonoBehaviour
     }
 
     public void OnPlay(){
+            
 		    SceneManager.LoadScene("Stage1");
-	  }
+            saveLevel(1);
+	}
+    public void OnRetry(){
+        if(LoadLevel()==2){
+            SceneManager.LoadScene("Stage2");
+        }
+        else{
+            SceneManager.LoadScene("Stage1");
+        }
+    }
     public void OnMenu(){
 		    SceneManager.LoadScene("Menu");
 	  }
+    void OnCollisionEnter2D(Collision2D coll){
+		if(coll.gameObject.tag == "Player"){
+			SceneManager.LoadScene("Stage2");
+            saveLevel(2);
+		}
+	}
+    public static int LoadLevel(){
+		int hg =0;
+		if(!PlayerPrefs.HasKey("level")){
+			PlayerPrefs.SetInt("level",0);
+		}else{
+			hg=PlayerPrefs.GetInt("level");
+		}
+		return hg;
+	}
+	public static void saveLevel(int lvl){
+		if(!PlayerPrefs.HasKey("level")){
+			PlayerPrefs.SetInt("level",0);
+		}else{
+			PlayerPrefs.SetInt("level",lvl);
+		}
+	}
 }
