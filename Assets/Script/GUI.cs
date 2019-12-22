@@ -23,6 +23,16 @@ public class GUI : MonoBehaviour
 		    SceneManager.LoadScene("Stage1");
             saveLevel(1);
 	}
+	public void OnResume(){
+		int level=LoadLevel();
+        if(level==1){
+			SceneManager.LoadScene("Stage1");
+		}else if(level==2){
+			SceneManager.LoadScene("Stage2");
+		}else if(level==3){
+			SceneManager.LoadScene("Stage3");
+		}
+	}
     public void OnRetry(){
         if(LoadLevel()==2){
             SceneManager.LoadScene("Stage2");
@@ -36,8 +46,13 @@ public class GUI : MonoBehaviour
 	  }
     void OnCollisionEnter2D(Collision2D coll){
 		if(coll.gameObject.tag == "Player"){
-			SceneManager.LoadScene("Stage2");
-            saveLevel(2);
+			int level=LoadLevel();
+			if(level==1){
+				SceneManager.LoadScene("Stage2");
+			}else if(level==2){
+				SceneManager.LoadScene("Stage3");
+			}
+            saveLevel(level+1);
 		}
 	}
     public static int LoadLevel(){
