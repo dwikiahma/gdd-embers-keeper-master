@@ -43,7 +43,7 @@ public class GUI : MonoBehaviour
     }
     public void OnMenu(){
 		    SceneManager.LoadScene("Menu");
-	  }
+	}
     void OnCollisionEnter2D(Collision2D coll){
 		if(coll.gameObject.tag == "Player"){
 			int level=LoadLevel();
@@ -51,6 +51,8 @@ public class GUI : MonoBehaviour
 				SceneManager.LoadScene("Stage2");
 			}else if(level==2){
 				SceneManager.LoadScene("Stage3");
+			}else if(level==3){
+				SceneManager.LoadScene("Ending");
 			}
             saveLevel(level+1);
 		}

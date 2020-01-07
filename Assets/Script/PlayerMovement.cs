@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour {
 	float horizontalMove=0f;
 	public float runSpeed=40f;
 	bool Jump =false;
+	public float powupTimer=0f;
 	// Use this for initialization
 	void Start () {
 		
@@ -25,11 +26,20 @@ public class PlayerMovement : MonoBehaviour {
 			Jump = true;
 			animator.SetBool("IsJump",true);
 		}
+		if(powupTimer>0.0f){
+			powupTimer -= Time.deltaTime;
+			Debug.Log(powupTimer);
+		}
+
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.CompareTag("DeadZone")){
 			SceneManager.LoadScene("Dead");
+		}
+		if(col.gameObject.CompareTag("powup")){
+			Destroy(col.gameObject);
+			powupTimer=10.0f;
 		}
 		
 	}
