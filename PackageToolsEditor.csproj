@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{07D1D232-051F-A41D-B836-B01255BEF769}</ProjectGuid>
+    <ProjectGuid>{B04703E8-F239-474B-52A9-00AF48FF43FC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PackageToolsEditor</AssemblyName>
@@ -291,6 +291,7 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.6f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+<<<<<<< Updated upstream
  <HintPath>E:/Git/level/gdd-embers-keeper-master/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
@@ -307,6 +308,24 @@
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>E:/Git/level/gdd-embers-keeper-master/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+=======
+ <HintPath>E:/unity/gdd-embers-keeper-master-level-desain/gdd-embers-keeper-master-level-desain/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Advertisements">
+ <HintPath>E:/unity/gdd-embers-keeper-master-level-desain/gdd-embers-keeper-master-level-desain/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.Editor">
+ <HintPath>E:/unity/gdd-embers-keeper-master-level-desain/gdd-embers-keeper-master-level-desain/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.StandardEvents">
+ <HintPath>E:/unity/gdd-embers-keeper-master-level-desain/gdd-embers-keeper-master-level-desain/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.Tracker">
+ <HintPath>E:/unity/gdd-embers-keeper-master-level-desain/gdd-embers-keeper-master-level-desain/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Purchasing">
+ <HintPath>E:/unity/gdd-embers-keeper-master-level-desain/gdd-embers-keeper-master-level-desain/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+>>>>>>> Stashed changes
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.6f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -665,7 +684,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="AstarPathfindingProject.csproj">
-      <Project>{6853095F-701C-E09B-AD2F-565DFA3016BB}</Project>      <Name>AstarPathfindingProject</Name>    </ProjectReference>
+      <Project>{674F641E-DAA6-4095-6433-F4ACE85C1B31}</Project>      <Name>AstarPathfindingProject</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
